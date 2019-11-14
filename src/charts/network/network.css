@@ -1,0 +1,13 @@
+#networkWrapper {
+	display: flex;
+    margin: 50px 1% 0;
+	height: 500px;
+}
+
+.vis-network {
+	overflow: visible !important;
+}
+
+canvas {
+    max-width: 100% !important;
+}

@@ -1,31 +1,49 @@
 {
-  "name": "workflow-apps",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "workflow-apps",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@tradeshift/elements": "^0.5.0",
+		"@typescript-eslint/eslint-plugin": "2.x",
+		"@typescript-eslint/parser": "2.x",
+		"babel-eslint": "^10.0.3",
+		"chart.js": "^2.9.2",
+		"chartjs-plugin-labels": "^1.1.0",
+		"eslint": "6.x",
+		"eslint-config-react-app": "^5.0.2",
+		"eslint-loader": "^3.0.2",
+		"eslint-plugin-flowtype": "3.x",
+		"eslint-plugin-import": "2.x",
+		"eslint-plugin-jsx-a11y": "6.x",
+		"eslint-plugin-react": "7.x",
+		"highcharts": "^7.2.1",
+		"react": "^16.11.0",
+		"react-dom": "^16.11.0",
+		"react-scripts": "3.2.0",
+		"vis-network": "^6.4.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"eslint-plugin-react-hooks": "1.x"
+	}
 }
