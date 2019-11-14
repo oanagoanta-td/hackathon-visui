@@ -41,7 +41,33 @@ const NetworkChart = () => {
 
 		const meh = new vis.Network(container, data, options);
 		console.log(`TCL: createNetwork -> meh`, meh);
+
+		console.log("Subnetwork test: ", filterSubNetwork(data.nodes[2], data.edges, data.nodes))
 	};
+
+	const filterSubNetwork = (selectednNode, edges, nodes) => {
+	
+		var remainingNodes = [];
+		var remainingEdges = [];
+
+		edges.forEach(edge => {
+			if (edge.from === selectednNode.id || edge.to === selectednNode.id) {
+				remainingEdges.push(edge)
+			}
+		});
+
+		remainingNodes.push(selectednNode);
+		remainingEdges.forEach(edge => {
+			nodes.forEach(node => {
+				if ((edge.from === node.id || edge.to === node.id) && !(node.id === selectednNode.id)) {
+					remainingNodes.push(node);
+				}
+			})
+		})
+
+
+		return { "nodes": remainingNodes, "edges": remainingEdges };
+	}
 
 	React.useEffect(
 		() => {
