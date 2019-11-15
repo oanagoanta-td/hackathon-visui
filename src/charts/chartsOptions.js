@@ -11,7 +11,7 @@ export default {
 			{
 				render: 'percentage',
 				fontColor: 'white',
-				fontSize: '12',
+				fontSize: '19',
 				textShadow: true,
 				fontStyle: 'bold'
 			}
@@ -26,6 +26,9 @@ export default {
 		display: true,
 		position: 'bottom',
 		onClick: onLegendClick,
-		align: 'center'
+		align: 'center',
+		labels: {
+			fontSize: 19
+		}
 	}
 };

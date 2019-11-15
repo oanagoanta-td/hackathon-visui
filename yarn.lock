@@ -9971,6 +9971,11 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+vis-network@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-6.4.0.tgz#1463b215f6b26329bdd07d4f560baf6a7179b97d"
+  integrity sha512-cCZpSt7RiMyLUffdSBcKOAhv2cckemx8oArO0tmLLLgdkPAGDVBi3AgsGhNWhej/ZtmR3B7eR8c6l9l0nqflmA==
+
 visjs-network@^4.24.11:
   version "4.24.11"
   resolved "https://registry.yarnpkg.com/visjs-network/-/visjs-network-4.24.11.tgz#b23a511cd30c11483cc243db22d56d35090b27c5"
