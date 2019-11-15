@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-.chartjs-size-monitor, canvas {
+.pie-charts-wrapper canvas {
 	max-width: 49%;
 }
 
