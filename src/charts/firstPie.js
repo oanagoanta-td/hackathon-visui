@@ -7,29 +7,34 @@ import { onPieClick } from './chartsUtils';
 
 const FirstPie = () => {
 	const canvas = React.useRef(null);
-	let pieChart = null;
-	const data = {
-		datasets: [
-			{
-				data: [ 300, 50, 100, 50 ],
-				backgroundColor: [ '#B0BF1A', '#007ED6', '#52D726', '#FF0000' ]
-			}
-		],
-		labels: [ instanceStatus.pending, instanceStatus.active, instanceStatus.completed, instanceStatus.error ]
-	};
+	let pieChart = React.useRef(null);
 
 	const renderPie = React.useCallback(
 		() => {
 			if (canvas.current) {
+				const data = {
+					datasets: [
+						{
+							data: [ 300, 50, 100, 50 ],
+							backgroundColor: [ '#B0BF1A', '#007ED6', '#52D726', '#FF0000' ]
+						}
+					],
+					labels: [
+						instanceStatus.pending,
+						instanceStatus.active,
+						instanceStatus.completed,
+						instanceStatus.error
+					]
+				};
 				const ctx = canvas.current.getContext('2d');
-				pieChart = new Chart(ctx, {
+				pieChart.current = new Chart(ctx, {
 					type: 'pie',
 					data,
 					options
 				});
 			}
 		},
-		[ canvas ]
+		[ canvas, pieChart ]
 	);
 
 	const renderWrapper = () => <canvas ref={canvas} />;
@@ -38,10 +43,10 @@ const FirstPie = () => {
 		() => {
 			if (canvas.current) {
 				renderPie();
-				onPieClick({ canvas, pieChart });
+				onPieClick({ canvas, pieChart: pieChart.current });
 			}
 		},
-		[ canvas ]
+		[ canvas, renderPie ]
 	);
 
 	return renderWrapper();
