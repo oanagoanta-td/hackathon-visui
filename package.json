@@ -7,7 +7,7 @@
 		"@typescript-eslint/eslint-plugin": "2.x",
 		"@typescript-eslint/parser": "2.x",
 		"babel-eslint": "^10.0.3",
-		"chart.js": "^2.9.2",
+		"chart.js": "^2.9.4",
 		"chartjs-plugin-labels": "^1.1.0",
 		"eslint": "6.x",
 		"eslint-config-react-app": "^5.0.2",
